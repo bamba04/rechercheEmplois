@@ -1,0 +1,25 @@
+{{ form_start(form) }}
+<div class="container">
+    <div class="main-content">
+        <div class="section__content section__content--p30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">Ajout du CV</div>
+                            <div class="card-body card-block col-md-12">
+
+                                {{ form_widget(form) }}
+
+
+                                <button class="btn btn-success btn-sm">{{ button_label|default('Soumettre') }}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ form_end(form) }}

@@ -1,0 +1,106 @@
+{% block stylesheets %}
+    {# {{ encore_entry_link_tags('app') }} #}
+    <!-- Fontfaces CSS-->
+    <link href="{{ asset('template/vendor/font-awesome-4.7/css/font-awesome.min.css') }}"
+          rel="stylesheet" media="all">
+    <link href="{{ asset('template/css/font-face.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('template/vendor/font-awesome-5/css/fontawesome-all.min.css') }}"
+          rel="stylesheet" media="all">
+    <link href="{{ asset('template/vendor/mdi-font/css/material-design-iconic-font.min.css') }}"
+          rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+
+    <link href="{{ asset('template/vendor/bootstrap-4.1/bootstrap.min.css') }}" rel="stylesheet"
+          media="all">
+    <!-- Vendor CSS-->
+    <link href="{{ asset('template/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css') }}"
+          rel="stylesheet" media="all">
+    <link href="{{ asset('template/vendor/animsition/animsition.min.css') }}" rel="stylesheet"
+          media="all">
+    <link href="{{ asset('template/vendor/wow/animate.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('template/vendor/css-hamburgers/hamburgers.min.css') }}" rel="stylesheet"
+          media="all">
+    <link href="{{ asset('template/vendor/slick/slick.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('template/vendor/select2/select2.min.css') }}" rel="stylesheet"
+          media="all">
+    <link href="{{ asset('template/vendor/perfect-scrollbar/perfect-scrollbar.css') }}"
+          rel="stylesheet" media="all">
+    <link href="{{ asset('template/vendor/vector-map/jqvmap.min.css') }}" rel="stylesheet"
+          media="all">
+
+    <!-- Main CSS-->
+    <link href="{{ asset('template/css/theme.css') }}" rel="stylesheet" media="all">
+
+{% endblock %}
+
+{% block body %}
+    <header class="header-desktop3">
+        <div class="section__content section__content--p30">
+            <div class="container-fluid">
+                <div class="header-wrap2">
+                    <div class="header__logo m-r-250">
+                        <a href="http://localhost/suivistock/accueil.php">
+                            <img src="{{ asset('template/images/icon/logo-white.png') }}"
+                                 alt="CoolAdmin"/>
+                        </a>
+                    </div>
+                    <div class="header__navbar m-r-85">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="{{ path('cv_show',{'id': cv.id}) }}">
+                                    <button type="button" class="btn btn-primary">Mon cv</button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ path('deconnexion') }}">
+                                    <button type="button" class="btn btn-danger">Deconnexion</button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </header>
+    <div class="page-container3">
+        <div class="container">
+            <div class="col-md-8">
+        {{ include('cv/formulaire.html.twig', {'button_label': 'Modifier'}) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    {% block javascripts %}
+        {# {{ encore_entry_script_tags('app') }} #}
+
+        <!-- Jquery JS-->
+        <script src="{{ asset('template/vendor/jquery-3.2.1.min.js') }}"></script>
+        <!-- Bootstrap JS-->
+        <script src="{{ asset('template/vendor/bootstrap-4.1/popper.min.js') }}"></script>
+        <script src="{{ asset('template/vendor/bootstrap-4.1/bootstrap.min.js') }}"></script>
+        <!-- Vendor JS       -->
+        <script src="{{ asset('template/vendor/slick/slick.min.js') }}">
+        </script>
+        <script src="{{ asset('template/vendor/wow/wow.min.js') }}"></script>
+        <script src="{{ asset('template/vendor/animsition/animsition.min.js') }}"></script>
+        <script src="{{ asset('template/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js') }}">
+        </script>
+        <script src="{{ asset('template/vendor/counter-up/jquery.waypoints.min.js') }}"></script>
+        <script src="{{ asset('template/vendor/counter-up/jquery.counterup.min.js') }}">
+        </script>
+        <script src="{{ asset('template/vendor/circle-progress/circle-progress.min.js') }}"></script>
+        <script src="{{ asset('template/vendor/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+        <script src="{{ asset('template/vendor/chartjs/Chart.bundle.min.js') }}"></script>
+        <script src="{{ asset('template/vendor/select2/select2.min.js') }}">
+        </script>
+        <script src="{{ asset('template/vendor/vector-map/jquery.vmap.js') }}"></script>
+        <script src="{{ asset('template/vendor/vector-map/jquery.vmap.min.js') }}"></script>
+        <script src="{{ asset('template/vendor/vector-map/jquery.vmap.sampledata.js') }}"></script>
+        <script src="{{ asset('template/vendor/vector-map/jquery.vmap.world.js') }}"></script>
+        <script src="{{ asset('template/js/recherche') }}"></script>
+        <script src="{{ asset('template/js/main.js') }}"></script>
+    {% endblock %}
+
